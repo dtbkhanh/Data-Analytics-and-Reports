@@ -1,0 +1,5 @@
+# Ignore all folders
+*/
+
+# But track the "Website Traffic" folder
+!/Website\ Traffic/
