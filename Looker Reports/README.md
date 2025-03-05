@@ -15,3 +15,11 @@ This report analyzes the effectiveness of various marketing campaigns, focusing 
 **📈 Live Dashboard:** [View Here](https://lookerstudio.google.com/reporting/29b78158-ab1a-4fc8-8511-20884e64ab77)  
 
 This report explores video game sales data to understand trends in the gaming industry. The dashboard provides insights into best-selling games, top-performing platforms, and the most successful game publishers. Users can analyze sales distribution across different regions, compare performance by genre, and track sales trends over time. This interactive report helps identify key factors that contribute to a game's commercial success.
+
+---
+
+## 📊 Report 03. E-Commerce Sales Analysis   
+**🔗 Dataset:** [E-Commerce Sales - Kaggle](https://www.kaggle.com/datasets/carrie1/ecommerce-data/data)  
+**📈 Live Dashboard:** [View Here](https://lookerstudio.google.com/s/soU6vxigTKs)  
+
+This report provides an in-depth analysis of e-commerce sales data from an online retailer, using transactions from 2010 and 2011. The dashboard examines sales trends, revenue performance over time, and customer purchasing behavior. Users can explore insights into the best-selling products, revenue distribution across different time periods, and country-based sales performance. The visualizations make it easy to track business growth and identify key drivers of sales performance.
