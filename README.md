@@ -2,17 +2,22 @@ This repository contains data analysis projects and interactive dashboards creat
 
 ## Repository Structure  
 
-- **Jupyter Notebooks/** – Python-based data analysis and visualization projects using libraries like **pandas, NumPy, Matplotlib, Seaborn, and Scikit-Learn**. These notebooks explore trends, patterns, and insights across different datasets.  
-- **Looker Reports/** – Interactive dashboards built in **Looker Studio**, visualizing key metrics and trends. Reports are available as **PDF exports** and **live dashboard links** for real-time exploration.  
+### 📂 Jupyter Notebooks/  
+This folder contains **Python-based data analysis projects**, leveraging powerful libraries such as:  
+- **pandas & NumPy** for data manipulation  
+- **Matplotlib & Seaborn** for data visualization  
+- **Scikit-Learn** for basic machine learning tasks  
 
-## How to Use  
+Each notebook explores **real-world datasets**, uncovering trends, patterns, and insights through data exploration and visualization.  
 
-- Open and run Jupyter notebooks using **Jupyter Notebook** or **Google Colab**.  
-- View exported PDFs in the Looker Reports folder or explore the interactive dashboards using the provided links.  
-- Modify and extend notebooks or dashboards to analyze your own datasets.  
+### 📂 Looker Reports/  
+This folder includes **interactive dashboards built in Looker Studio**, designed for **visualizing key metrics and trends**.  
+- 📄 **PDF Exports** of dashboards for reference  
+- 🔗 **Live Dashboard Links** for real-time data exploration  
 
-## Requirements  
+## 🚀 Getting Started  
 
-To run the Jupyter Notebooks, install the necessary Python libraries:  
+### Run Jupyter Notebooks Locally  
+Ensure you have Python installed, then install the required libraries:  
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
