@@ -2,7 +2,7 @@
 
 This folder contains various reports and dashboards created in Looker Studio, providing data-driven insights into different business domains. Each folder includes exported PDF files of the reports for easy reference. For interactive dashboards, visit the live links provided below.
 
-## 📊 Report 01. Marketing Campaign Performance Analysis
+## 📊 01. Marketing Campaign Performance Analysis
 **🔗 Dataset:** [Marketing Campaign Performance - Kaggle](https://www.kaggle.com/datasets/manishabhatt22/marketing-campaign-performance-dataset)  
 **📈 Live Dashboard:** [View Here](https://lookerstudio.google.com/reporting/b6a4da74-6671-4cdf-a05d-6b1b1de52801)  
 
@@ -10,7 +10,7 @@ This report analyzes the effectiveness of various marketing campaigns, focusing 
 
 ---
 
-## 📊 Report 02. Video Game Sales Analysis  
+## 📊 02. Video Game Sales Analysis  
 **🔗 Dataset:** [Video Game Sales - Kaggle](https://www.kaggle.com/datasets/gregorut/videogamesales)  
 **📈 Live Dashboard:** [View Here](https://lookerstudio.google.com/reporting/29b78158-ab1a-4fc8-8511-20884e64ab77)  
 
@@ -18,7 +18,7 @@ This report explores video game sales data to understand trends in the gaming in
 
 ---
 
-## 📊 Report 03. E-Commerce Sales Analysis   
+## 📊 03. E-Commerce Sales Analysis   
 **🔗 Dataset:** [E-Commerce Sales - Kaggle](https://www.kaggle.com/datasets/carrie1/ecommerce-data/data)  
 **📈 Live Dashboard:** [View Here](https://lookerstudio.google.com/s/soU6vxigTKs)  
 
@@ -26,7 +26,7 @@ This report provides an in-depth analysis of e-commerce sales data from an onlin
 
 ---
 
-## 📊 Report 04. Social Media Ad Campaigns  
+## 📊 04. Social Media Ad Campaigns  
 **🔗 Dataset:** [Social Media Ad Campaigns - Kaggle](https://www.kaggle.com/datasets/loveall/clicks-conversion-tracking)  
 **📈 Live Dashboard:** [View Here](https://lookerstudio.google.com/s/jUghtceTylc)  
 
