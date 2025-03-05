@@ -23,3 +23,11 @@ This report explores video game sales data to understand trends in the gaming in
 **📈 Live Dashboard:** [View Here](https://lookerstudio.google.com/s/soU6vxigTKs)  
 
 This report provides an in-depth analysis of e-commerce sales data from an online retailer, using transactions from 2010 and 2011. The dashboard examines sales trends, revenue performance over time, and customer purchasing behavior. Users can explore insights into the best-selling products, revenue distribution across different time periods, and country-based sales performance. The visualizations make it easy to track business growth and identify key drivers of sales performance.
+
+---
+
+## 4. Social Media Ad Campaigns  
+**🔗 Dataset:** [Social Media Ad Campaigns - Kaggle](https://www.kaggle.com/datasets/loveall/clicks-conversion-tracking)  
+**📈 Live Dashboard:** [View Here](https://lookerstudio.google.com/s/jUghtceTylc)  
+
+This report provides insights into the performance of social media ad campaigns, specifically analyzing the effectiveness of paid advertisements in generating conversions. The dashboard includes key performance metrics such as impressions, clicks, ad spending, and conversion rates. Users can explore ad performance across different audience demographics, age groups, and interest categories. The visualizations highlight patterns in customer engagement and help businesses optimize their digital marketing strategies for higher returns on ad spend.
