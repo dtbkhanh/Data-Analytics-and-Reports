@@ -34,7 +34,7 @@ This report provides insights into the performance of social media ad campaigns,
 
 ---
 
-## 📊  05. COVID-19 Cases Analysis
+## 📊  05. COVID-19 Global Cases Insights
 **🔗 Dataset:** [Novel Corona Virus 2019 Dataset - Kaggle](https://www.kaggle.com/datasets/sudalairajkumar/novel-corona-virus-2019-dataset)  
 **📈 Live Dashboard:** [View Here](https://lookerstudio.google.com/s/tIqnfB-IR8A)  
 
