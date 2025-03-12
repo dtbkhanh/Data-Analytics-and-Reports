@@ -31,3 +31,11 @@ This report provides an in-depth analysis of e-commerce sales data from an onlin
 **📈 Live Dashboard:** [View Here](https://lookerstudio.google.com/s/jUghtceTylc)  
 
 This report provides insights into the performance of social media ad campaigns, specifically analyzing the effectiveness of paid advertisements in generating conversions. The dashboard includes key performance metrics such as impressions, clicks, ad spending, and conversion rates. Users can explore ad performance across different audience demographics, age groups, and interest categories. The visualizations highlight patterns in customer engagement and help businesses optimize their digital marketing strategies for higher returns on ad spend.
+
+---
+
+## 📊  05. COVID-19 Cases Analysis
+**🔗 Dataset:** [Novel Corona Virus 2019 Dataset - Kaggle](https://www.kaggle.com/datasets/sudalairajkumar/novel-corona-virus-2019-dataset)  
+**📈 Live Dashboard:** [View Here](https://lookerstudio.google.com/s/tIqnfB-IR8A)  
+
+This report provides an analytical overview of the global impact of COVID-19, focusing on confirmed cases and deaths across different regions. The dashboard enables users to explore country-specific statistics, compare outbreaks, and identify the most affected regions. The insights help in understanding the spread and severity of COVID-19 worldwide.
