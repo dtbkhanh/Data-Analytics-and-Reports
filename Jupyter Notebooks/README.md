@@ -13,3 +13,10 @@ This notebook performs an in-depth analysis of sales data from an online retaile
 **Dataset:** [Amazon Sales Dataset - Kaggle](https://www.kaggle.com/datasets/karkavelrajaj/amazon-sales-dataset)
 
 In this notebook, we analyze over 1,000 Amazon products, looking at how product pricing, ratings, and reviews affect overall sales performance. Key insights include understanding how product reviews and ratings impact consumer behavior and how discounts influence sales. The notebook provides a breakdown of product performance and explores customer behavior by analyzing rating counts and review content.
+
+---
+
+## 📊 Notebook #03. COVID-19 Cases Analysis
+**Dataset:** [Novel Corona Virus 2019 Dataset](https://www.kaggle.com/datasets/sudalairajkumar/novel-corona-virus-2019-dataset/data)
+
+This notebook examines global COVID-19 data to explore trends in confirmed cases, deaths, and recoveries across different countries. The analysis includes time series visualizations, comparisons of country-specific statistics, and key metrics like mortality and recovery rates. Key findings help in understanding the global impact of COVID-19 and identifying the worst-affected regions.
