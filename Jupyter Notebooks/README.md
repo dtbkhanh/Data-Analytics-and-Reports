@@ -20,3 +20,10 @@ In this notebook, we analyze over 1,000 Amazon products, looking at how product 
 **Dataset:** [Novel Corona Virus 2019 Dataset](https://www.kaggle.com/datasets/sudalairajkumar/novel-corona-virus-2019-dataset/data)
 
 This notebook examines global COVID-19 data to explore trends in confirmed cases, deaths, and recoveries across different countries. The analysis includes time series visualizations, comparisons of country-specific statistics, and key metrics like mortality and recovery rates. Key findings help in understanding the global impact of COVID-19 and identifying the worst-affected regions.
+
+---
+
+## 📊 Notebook #04. COVID-19 Patient Analysis
+**Dataset:** [COVID-19 Dataset](https://www.kaggle.com/datasets/meirnizri/covid19-dataset/data)
+
+This notebook analyzes COVID-19 patient data, focusing on demographic, health condition, and treatment factors. It examines patient distribution across medical units, survival analysis based on various conditions, and the effects of treatments and comorbidities on survival rates. Visualizations include heatmaps, bar charts, and survival comparisons, providing insights into the impact of treatments, age, gender, and other factors on patient outcomes.
