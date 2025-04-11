@@ -51,14 +51,10 @@ This report analyzes user behavior, marketing channel performance, and conversio
 
 The dashboard provides key insights into:
 
-- Conversion rates and revenue by platform (Facebook, Google, TikTok)
-
-- Campaign-level performance across different acquisition types
-
-- User segmentation by region, VAT status, profession, and account type
-
-- Behavioral differences between converted and non-converted users
-
+- Conversion rates and revenue by platform (Facebook, Google, TikTok)  
+- Campaign-level performance across different acquisition types  
+- User segmentation by region, VAT status, profession, and account type  
+- Behavioral differences between converted and non-converted users  
 - Strategic budget recommendations based on revenues and user intent signals
 
 This analysis helps inform more innovative marketing investments and supports product growth by identifying the most impactful campaigns, audiences, and conversion levers.
