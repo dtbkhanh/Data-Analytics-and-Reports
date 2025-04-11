@@ -39,3 +39,26 @@ This report provides insights into the performance of social media ad campaigns,
 **📈 Live Dashboard:** [View Here](https://lookerstudio.google.com/s/tIqnfB-IR8A)  
 
 This report provides an analytical overview of the global impact of COVID-19, focusing on confirmed cases and deaths across different regions. The dashboard enables users to explore country-specific statistics, compare outbreaks, and identify the most affected regions. The insights help in understanding the spread and severity of COVID-19 worldwide.
+
+---
+
+## 📊 06. Mobile App Marketing & Conversion Analysis
+
+**🔗 Dataset:** Internal App Usage & Campaign Data (2020 - 2025)  
+**📈 Live Dashboard:** [View Here](https://lookerstudio.google.com/reporting/8959b791-5c18-4a12-8986-2f58b882b980)  
+
+This report analyzes user behavior, marketing channel performance, and conversion trends for a mobile application targeting self-employed professionals. The dataset covers user acquisition, campaign types, regional engagement, and subscription patterns throughout 2021.
+
+The dashboard provides key insights into:
+
+- Conversion rates and revenue by platform (Facebook, Google, TikTok)
+
+- Campaign-level performance across different acquisition types
+
+- User segmentation by region, VAT status, profession, and account type
+
+- Behavioral differences between converted and non-converted users
+
+- Strategic budget recommendations based on revenues and user intent signals
+
+This analysis helps inform more innovative marketing investments and supports product growth by identifying the most impactful campaigns, audiences, and conversion levers.
