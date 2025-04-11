@@ -27,3 +27,12 @@ This notebook examines global COVID-19 data to explore trends in confirmed cases
 **Dataset:** [COVID-19 Dataset](https://www.kaggle.com/datasets/meirnizri/covid19-dataset/data)
 
 This notebook analyzes COVID-19 patient data, focusing on demographic, health condition, and treatment factors. It examines patient distribution across medical units, survival analysis based on various conditions, and the effects of treatments and comorbidities on survival rates. Visualizations include heatmaps, bar charts, and survival comparisons, providing insights into the impact of treatments, age, gender, and other factors on patient outcomes.
+
+---
+
+## 📊  #05. Mobile App Marketing & Conversion Analysis
+
+**🔗 Dataset:** Internal App Usage & Campaign Data (2020 - 2025)  
+**📈 Looker Studio Dashboards:** [View Here](https://lookerstudio.google.com/reporting/8959b791-5c18-4a12-8986-2f58b882b980)  
+
+This notebook analyzes user behavior, marketing channel performance, and conversion trends for a mobile application targeting self-employed professionals. The dataset covers user acquisition, campaign types, regional engagement, and subscription patterns.
