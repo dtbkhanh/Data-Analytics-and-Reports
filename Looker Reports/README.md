@@ -47,6 +47,7 @@ This report provides an analytical overview of the global impact of COVID-19, fo
 **🔗 Dataset:** Internal App Usage & Campaign Data (2020 - 2025)  
 **📈 Live Dashboard:** [View Here](https://lookerstudio.google.com/reporting/8959b791-5c18-4a12-8986-2f58b882b980)  
 **💻 Data Preparation:** [View Here](https://github.com/dtbkhanh/Data-Analytics-and-Reports/blob/d3a1eb1c383a79ef86b52e2c2378b418f5c65e18/Jupyter%20Notebooks/05.%20Mobile%20App%20Marketing%20%26%20Conversion%20Analysis.ipynb)  
+**📝 Case Study Blog:** [Read Here](https://dtbkhanh.github.io/2025/04/21/mobile-app-marketing-conversion-analysis.html)  
 
 This report analyzes user behavior, marketing channel performance, and conversion trends for a mobile application targeting self-employed professionals. The dataset covers user acquisition, campaign types, regional engagement, and subscription patterns.
 
