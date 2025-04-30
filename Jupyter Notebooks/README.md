@@ -34,5 +34,6 @@ This notebook analyzes COVID-19 patient data, focusing on demographic, health co
 
 **🔗 Dataset:** Internal App Usage & Campaign Data (2020 - 2025)  
 **📈 Looker Studio Dashboards:** [View Here](https://lookerstudio.google.com/reporting/8959b791-5c18-4a12-8986-2f58b882b980)  
+**📝 Case Study Blog:** [Read Here](https://dtbkhanh.github.io/2025/04/21/mobile-app-marketing-conversion-analysis.html)  
 
 This notebook analyzes user behavior, marketing channel performance, and conversion trends for a mobile application targeting self-employed professionals. The dataset covers user acquisition, campaign types, regional engagement, and subscription patterns.
