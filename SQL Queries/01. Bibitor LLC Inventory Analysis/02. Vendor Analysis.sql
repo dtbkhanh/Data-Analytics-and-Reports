@@ -1,7 +1,7 @@
 -- Vendor Analysis Script
 
 -- This script provides various insights into vendor performance, including:
--- - Lis of all vendors
+-- - List of all vendors
 -- - Summarizing vendor activities (purchases, invoices, freight)
 -- - Identifying top vendors by spending, sales, quantity, and freight cost
 -- - Analyzing freight as a percentage of total purchase cost
