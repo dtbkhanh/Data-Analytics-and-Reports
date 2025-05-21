@@ -2,8 +2,8 @@
 
 This case study analyzes sales, purchases, inventory, and vendor invoice data for Bibitor, LLC — a fictional liquor store chain with ~80 locations and over $450M in annual sales. The goal is to perform due diligence on the wine and spirits business over a 12-month period, focusing on December 2016.
 
-**Dataset Source:** HUB of Analytics Education – [www.hubae.org](https://www.hubae.org)
-**Fictional Setting:** Lincoln, USA
+- **Dataset Source:** HUB of Analytics Education – [www.hubae.org](https://www.hubae.org)  
+- **Fictional Setting:** Lincoln, USA
 
 ---
 
