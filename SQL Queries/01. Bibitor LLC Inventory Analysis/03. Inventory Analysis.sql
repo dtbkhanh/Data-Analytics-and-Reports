@@ -1,6 +1,3 @@
-Track how long purchased inventory sits before selling
-Slow Moving Inventory: List of inventory items that took longer than 60 days to sell after being received
-
 -- SQL Inventory Turnover and Slow-Moving Analysis Script
 
 -- This script is designed to analyze the efficiency of inventory movement, specifically
