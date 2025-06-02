@@ -47,6 +47,9 @@ This script focuses on **comprehensive vendor performance analysis**. It lists a
 ### 3. `Inventory Analysis.sql`
 This script analyzes **inventory turnover and identifies slow-moving inventory**. It calculates the "Days to Sell" for each item (time from receipt to sale) and flags items that exceed a specified sale lag threshold (e.g., over 60 days).
 
+### 4. Inventory MovingAvgCost.sql
+This script helps analyze inventory valuation by calculating the Moving Average Cost (MAC) of items, combining sales and purchase data with inventory balances. It supports better cost control and inventory management decisions.
+
 ---
 
 This case offers practical insights into retail operations, inventory control, and vendor performance — a comprehensive exercise in data-driven business decision-making.
