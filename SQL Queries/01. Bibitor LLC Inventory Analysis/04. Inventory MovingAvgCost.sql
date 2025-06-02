@@ -135,7 +135,7 @@ SELECT
     Brand,
     SUM(Quantity) AS Quantity,
     SUM(Price) AS Price,
-    (SUM(Price) / SUM(Quantity)) AS MAC
+    (SUM(Price) / NULLIF(SUM(Quantity), 0)) AS MAC
 FROM
     temp.BegInv_andTrans_proc
 GROUP BY
