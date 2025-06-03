@@ -42,8 +42,29 @@ SELECT
 FROM PurchasesDec p
 LEFT JOIN VendorInvoicesDec i
     ON p.VendorNumber = i.VendorNumber AND p.PONumber = i.PONumber
-GROUP BY p.VendorNumber, p.VendorName
+GROUP BY 
+    p.VendorNumber,
+    p.VendorName
 ORDER BY p.VendorNumber;
+
+-- SUB-SECTION 1.3: AGGREGATED SALES BY VENDOR AND INVENTORY ITEM
+
+-- Join sales and purchase data to aggregate key sales metrics for each inventory item,
+-- categorized by its respective vendor.
+-- It provides a clear overview of total units sold and total revenue generated per item from each vendor.
+CREATE TABLE VendorItemsSold AS
+SELECT
+    p.VendorNumber,
+    s.InventoryId,
+    SUM(s.SalesQuantity) AS total_sold,
+    SUM(s.SalesQuantity * s.SalesPrice) AS total_sales
+FROM SalesDec s
+JOIN PurchasesDec p
+    ON s.InventoryId = p.InventoryId
+GROUP BY
+    p.VendorNumber,
+    s.InventoryId;
+
 
 ---------------------------------------------------------------------------------------------------
 -- SECTION 2: TOP VENDORS BY KEY METRICS
@@ -61,7 +82,9 @@ SELECT
     VendorName,
     SUM(Dollars) AS TotalPurchaseDollars
 FROM PurchasesDec
-GROUP BY VendorNumber, VendorName
+GROUP BY
+    VendorNumber,
+    VendorName
 ORDER BY TotalPurchaseDollars DESC
 LIMIT 10; -- Display top 10 vendors by purchase spending
 
@@ -74,7 +97,9 @@ SELECT
     VendorName,
     SUM(SalesDollars) AS TotalSalesDollars
 FROM SalesDec
-GROUP BY VendorNo, VendorName
+GROUP BY
+    VendorNumber,
+    VendorName
 ORDER BY TotalSalesDollars DESC
 LIMIT 10; -- Display top 10 vendors by sales dollars
 
@@ -86,7 +111,9 @@ SELECT
     VendorName,
     SUM(Quantity) AS TotalQuantityPurchased
 FROM PurchasesDec
-GROUP BY VendorNumber, VendorName
+GROUP BY
+    VendorNumber,
+    VendorName
 ORDER BY TotalQuantityPurchased DESC
 LIMIT 10; -- Display top 10 vendors by quantity purchased
 
@@ -98,7 +125,9 @@ SELECT
     VendorName,
     SUM(Freight) AS TotalFreightCost
 FROM VendorInvoicesDec
-GROUP BY VendorNumber, VendorName
+GROUP BY
+    VendorNumber,
+    VendorName
 ORDER BY TotalFreightCost DESC
 LIMIT 10; -- Display top 10 vendors by total freight cost
 
@@ -113,7 +142,9 @@ SELECT
     SUM(Freight) AS TotalFreightDollars,
     ROUND(SUM(Freight) * 100.0 / NULLIF(SUM(Dollars), 0), 2) AS FreightPercentOfPurchase -- Handle division by zero
 FROM VendorInvoicesDec
-GROUP BY VendorNumber, VendorName
+GROUP BY
+    VendorNumber,
+    VendorName
 ORDER BY FreightPercentOfPurchase DESC
 LIMIT 10; -- Display top 10 vendors by freight percentage
 
