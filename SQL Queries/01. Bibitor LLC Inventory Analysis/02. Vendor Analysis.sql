@@ -66,7 +66,7 @@ GROUP BY
     p.VendorNumber,
     s.InventoryId;
 
--- ## 1.3.2: Identify the most sold Item per Vendor
+-- ## 1.3.2: Identify the top-selling Product by Vendor
 SELECT
     VendorNumber,
     InventoryId,
