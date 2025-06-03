@@ -44,7 +44,7 @@ This script performs **foundational data validation and basic summarization**. I
 ### 2. `Vendor Analysis.sql`
 This script focuses on **comprehensive vendor performance analysis**. It lists all vendors, summarizes their activities, identifies top vendors by spending, sales, quantity, and freight costs, and calculates gross margins to assess profitability.
 
-### 3. `Inventory Analysis.sql`
+### 3. `Inventory Turnover Analysis.sql`
 This script analyzes **inventory turnover and identifies slow-moving inventory**. It calculates the "Days to Sell" for each item (time from receipt to sale) and flags items that exceed a specified sale lag threshold (e.g., over 60 days).
 
 ### 4. `Inventory MovingAvgCost.sql`
