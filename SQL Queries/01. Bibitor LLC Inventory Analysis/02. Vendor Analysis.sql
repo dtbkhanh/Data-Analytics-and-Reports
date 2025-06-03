@@ -1,12 +1,12 @@
 -- Vendor Analysis Script
 
 -- This script provides various insights into vendor performance, including:
--- - List of all vendors
--- - Summarizing vendor activities (purchases, invoices, freight)
--- - Identifying top vendors by spending, sales, quantity, and freight cost
--- - Analyzing freight as a percentage of total purchase cost
--- - Tracking monthly purchase and sales trends
--- - Calculating gross margin by vendor to identify profitability.
+-- * List of all vendors
+-- * Summarizing vendor activities (purchases, invoices, freight)
+-- * Identifying top vendors by spending, sales, quantity, and freight cost
+-- * Analyzing freight as a percentage of total purchase cost
+-- * Tracking monthly purchase and sales trends
+-- * Calculating gross margin by vendor to identify profitability.
 
 ---------------------------------------------------------------------------------------------------
 -- SECTION 1: VENDOR OVERVIEWS
@@ -15,7 +15,7 @@
 -- This section focuses on identifying all unique vendors and providing a comprehensive summary
 -- of their combined activities across purchasing and invoicing.
 
--- SUB-SECTION 1.1: LIST ALL DISTINCT VENDORS
+-- # SUB-SECTION 1.1: LIST ALL DISTINCT VENDORS
 
 -- Retrieve a comprehensive list of all unique vendors from both PurchasesDec and VendorInvoicesDec.
 -- This ensures all vendors, regardless of whether they have purchase or invoice records, are included.
@@ -25,7 +25,7 @@ UNION
 SELECT DISTINCT VendorNumber, VendorName
 FROM VendorInvoicesDec;
 
--- SUB-SECTION 1.2: AGGREGATED VENDOR ACTIVITIES
+-- # SUB-SECTION 1.2: AGGREGATED VENDOR ACTIVITIES
 
 -- Summarize total activities for each vendor by joining purchase and invoice data.
 -- This query provides a holistic view of each vendor's engagement, including POs, quantities,
@@ -47,11 +47,12 @@ GROUP BY
     p.VendorName
 ORDER BY p.VendorNumber;
 
--- SUB-SECTION 1.3: AGGREGATED SALES BY VENDOR AND INVENTORY ITEM
+-- # SUB-SECTION 1.3: SALES PERFORMANCE OF VENDOR-SUPPLIED ITEMS
 
--- Join sales and purchase data to aggregate key sales metrics for each inventory item,
--- categorized by its respective vendor.
--- It provides a clear overview of total units sold and total revenue generated per item from each vendor.
+-- These queries analyze the sales data of inventory items, linking them back to their respective vendors.
+-- The goal here is to understand which items, from which vendors, are performing best in terms of sales volume and revenue.
+
+-- ## 1.3.1: Aggregate Sales data for Vendor Inventory
 CREATE TABLE VendorItemsSold AS
 SELECT
     p.VendorNumber,
@@ -65,6 +66,23 @@ GROUP BY
     p.VendorNumber,
     s.InventoryId;
 
+-- ## 1.3.2: Identify the most sold Item per Vendor
+SELECT
+    VendorNumber,
+    InventoryId,
+    total_sold,
+    total_sales
+FROM (
+    SELECT
+        VendorNumber,
+        InventoryId,
+        total_sold,
+        total_sales,
+        ROW_NUMBER() OVER (PARTITION BY VendorNumber ORDER BY total_sold DESC) as rn
+    FROM
+        VendorItemsSold
+) AS RankedSales
+WHERE rn = 1; -- Filters to include only the top-ranked (most sold) item for each vendor
 
 ---------------------------------------------------------------------------------------------------
 -- SECTION 2: TOP VENDORS BY KEY METRICS
@@ -74,7 +92,7 @@ GROUP BY
 -- financial and operational metrics such as total spending, sales generated, quantity purchased,
 -- and freight costs.
 
--- SUB-SECTION 2.1: TOP VENDORS BY TOTAL PURCHASES ($)
+-- # SUB-SECTION 2.1: TOP VENDORS BY TOTAL PURCHASES ($)
 
 -- Identify top suppliers by total spending (Dollars) from PurchasesDec.
 SELECT
@@ -88,7 +106,7 @@ GROUP BY
 ORDER BY TotalPurchaseDollars DESC
 LIMIT 10; -- Display top 10 vendors by purchase spending
 
--- SUB-SECTION 2.2: TOP VENDORS BY TOTAL SALES ($)
+-- # SUB-SECTION 2.2: TOP VENDORS BY TOTAL SALES ($)
 
 -- Identify top vendors based on the sales generated from their products (SalesDollars).
 -- This helps compare purchase volume vs. sales revenue to identify profitable vendors.
@@ -103,7 +121,7 @@ GROUP BY
 ORDER BY TotalSalesDollars DESC
 LIMIT 10; -- Display top 10 vendors by sales dollars
 
--- SUB-SECTION 2.3: TOP VENDORS BY QUANTITY PURCHASED
+-- # SUB-SECTION 2.3: TOP VENDORS BY QUANTITY PURCHASED
 
 -- Identify top vendors based on the total quantity of items purchased from them.
 SELECT
@@ -117,7 +135,7 @@ GROUP BY
 ORDER BY TotalQuantityPurchased DESC
 LIMIT 10; -- Display top 10 vendors by quantity purchased
 
--- SUB-SECTION 2.4: TOP VENDORS BY FREIGHT COST
+-- # SUB-SECTION 2.4: TOP VENDORS BY FREIGHT COST
 
 -- Identify vendors that incur the most shipping costs (Freight) from VendorInvoicesDec.
 SELECT
@@ -131,7 +149,7 @@ GROUP BY
 ORDER BY TotalFreightCost DESC
 LIMIT 10; -- Display top 10 vendors by total freight cost
 
--- SUB-SECTION 2.5: TOP VENDORS BY FREIGHT AS PERCENTAGE OF TOTAL PURCHASE COST
+-- # SUB-SECTION 2.5: TOP VENDORS BY FREIGHT AS PERCENTAGE OF TOTAL PURCHASE COST
 
 -- Calculate and rank vendors by freight cost as a percentage of their total purchase cost.
 -- This helps identify vendors with potentially high shipping overheads.
@@ -155,7 +173,7 @@ LIMIT 10; -- Display top 10 vendors by freight percentage
 -- This section analyzes purchasing and sales activities over time, typically aggregated by month,
 -- to identify trends and seasonality.
 
--- SUB-SECTION 3.1: MONTHLY PURCHASES SUMMARY
+-- # SUB-SECTION 3.1: MONTHLY PURCHASES SUMMARY
 
 -- Summarize total purchase dollars on a monthly basis from PurchasesDec using InvoiceDate.
 SELECT
@@ -165,7 +183,7 @@ FROM PurchasesDec
 GROUP BY PurchaseMonth
 ORDER BY PurchaseMonth;
 
--- SUB-SECTION 3.2: MONTHLY SALES SUMMARY
+-- # SUB-SECTION 3.2: MONTHLY SALES SUMMARY
 
 -- Summarize total sales dollars on a monthly basis from SalesDec using SalesDate.
 SELECT
