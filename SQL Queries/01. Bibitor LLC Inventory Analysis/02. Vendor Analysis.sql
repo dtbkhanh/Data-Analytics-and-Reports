@@ -106,6 +106,7 @@ GROUP BY
 ORDER BY TotalPurchaseDollars DESC
 LIMIT 10; -- Display top 10 vendors by purchase spending
 
+
 -- # SUB-SECTION 2.2: TOP VENDORS BY TOTAL SALES ($)
 -- Identify top vendors based on the sales generated from their products (SalesDollars).
 -- This helps compare purchase volume vs. sales revenue to identify profitable vendors.
@@ -120,6 +121,7 @@ GROUP BY
 ORDER BY TotalSalesDollars DESC
 LIMIT 10; -- Display top 10 vendors by sales dollars
 
+
 -- # SUB-SECTION 2.3: TOP VENDORS BY QUANTITY PURCHASED
 -- Identify top vendors based on the total quantity of items purchased from them.
 SELECT
@@ -133,6 +135,7 @@ GROUP BY
 ORDER BY TotalQuantityPurchased DESC
 LIMIT 10; -- Display top 10 vendors by quantity purchased
 
+
 -- # SUB-SECTION 2.4: TOP VENDORS BY FREIGHT COST
 -- Identify vendors that incur the most shipping costs (Freight) from VendorInvoicesDec.
 SELECT
@@ -145,6 +148,7 @@ GROUP BY
     VendorName
 ORDER BY TotalFreightCost DESC
 LIMIT 10; -- Display top 10 vendors by total freight cost
+
 
 -- # SUB-SECTION 2.5: TOP VENDORS BY FREIGHT AS PERCENTAGE OF TOTAL PURCHASE COST
 -- Calculate and rank vendors by freight cost as a percentage of their total purchase cost.
@@ -178,6 +182,7 @@ SELECT
 FROM PurchasesDec
 GROUP BY PurchaseMonth
 ORDER BY PurchaseMonth;
+
 
 -- # SUB-SECTION 3.2: MONTHLY SALES SUMMARY
 -- Summarize total sales dollars on a monthly basis from SalesDec using SalesDate.
