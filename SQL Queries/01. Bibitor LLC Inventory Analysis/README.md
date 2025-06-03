@@ -23,6 +23,10 @@ This case study analyzes sales, purchases, inventory, and vendor invoice data fo
 - **Sales**
   - `SalesDec`: Item-level sales data including price, quantity, and total revenue.
 
+## 🧩 Data Model
+
+![DataModel_Bibitor](https://github.com/user-attachments/assets/e6d86de2-2505-44a6-921b-5a1e1a37264e)
+
 ---
 
 ## 🎯 Key Analysis Goals
