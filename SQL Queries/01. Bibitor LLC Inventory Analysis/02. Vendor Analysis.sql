@@ -84,6 +84,7 @@ FROM (
 ) AS RankedSales
 WHERE rn = 1; -- Filters to include only the top-ranked (most sold) item for each vendor
 
+
 ---------------------------------------------------------------------------------------------------
 -- SECTION 2: TOP VENDORS BY KEY METRICS
 ---------------------------------------------------------------------------------------------------
@@ -93,7 +94,6 @@ WHERE rn = 1; -- Filters to include only the top-ranked (most sold) item for eac
 -- and freight costs.
 
 -- # SUB-SECTION 2.1: TOP VENDORS BY TOTAL PURCHASES ($)
-
 -- Identify top suppliers by total spending (Dollars) from PurchasesDec.
 SELECT
     VendorNumber,
@@ -107,7 +107,6 @@ ORDER BY TotalPurchaseDollars DESC
 LIMIT 10; -- Display top 10 vendors by purchase spending
 
 -- # SUB-SECTION 2.2: TOP VENDORS BY TOTAL SALES ($)
-
 -- Identify top vendors based on the sales generated from their products (SalesDollars).
 -- This helps compare purchase volume vs. sales revenue to identify profitable vendors.
 SELECT
@@ -122,7 +121,6 @@ ORDER BY TotalSalesDollars DESC
 LIMIT 10; -- Display top 10 vendors by sales dollars
 
 -- # SUB-SECTION 2.3: TOP VENDORS BY QUANTITY PURCHASED
-
 -- Identify top vendors based on the total quantity of items purchased from them.
 SELECT
     VendorNumber,
@@ -136,7 +134,6 @@ ORDER BY TotalQuantityPurchased DESC
 LIMIT 10; -- Display top 10 vendors by quantity purchased
 
 -- # SUB-SECTION 2.4: TOP VENDORS BY FREIGHT COST
-
 -- Identify vendors that incur the most shipping costs (Freight) from VendorInvoicesDec.
 SELECT
     VendorNumber,
@@ -150,7 +147,6 @@ ORDER BY TotalFreightCost DESC
 LIMIT 10; -- Display top 10 vendors by total freight cost
 
 -- # SUB-SECTION 2.5: TOP VENDORS BY FREIGHT AS PERCENTAGE OF TOTAL PURCHASE COST
-
 -- Calculate and rank vendors by freight cost as a percentage of their total purchase cost.
 -- This helps identify vendors with potentially high shipping overheads.
 SELECT
@@ -166,6 +162,7 @@ GROUP BY
 ORDER BY FreightPercentOfPurchase DESC
 LIMIT 10; -- Display top 10 vendors by freight percentage
 
+
 ---------------------------------------------------------------------------------------------------
 -- SECTION 3: TREND ANALYSIS OVER TIME
 ---------------------------------------------------------------------------------------------------
@@ -174,7 +171,6 @@ LIMIT 10; -- Display top 10 vendors by freight percentage
 -- to identify trends and seasonality.
 
 -- # SUB-SECTION 3.1: MONTHLY PURCHASES SUMMARY
-
 -- Summarize total purchase dollars on a monthly basis from PurchasesDec using InvoiceDate.
 SELECT
     strftime('%Y-%m', InvoiceDate) AS PurchaseMonth, -- Format date to YYYY-MM
@@ -184,7 +180,6 @@ GROUP BY PurchaseMonth
 ORDER BY PurchaseMonth;
 
 -- # SUB-SECTION 3.2: MONTHLY SALES SUMMARY
-
 -- Summarize total sales dollars on a monthly basis from SalesDec using SalesDate.
 SELECT
     strftime('%Y-%m', SalesDate) AS SalesMonth, -- Format date to YYYY-MM
@@ -192,6 +187,7 @@ SELECT
 FROM SalesDec
 GROUP BY SalesMonth
 ORDER BY SalesMonth;
+
 
 ---------------------------------------------------------------------------------------------------
 -- SECTION 4: PROFITABILITY ANALYSIS
