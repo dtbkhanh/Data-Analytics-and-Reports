@@ -27,9 +27,8 @@ FROM VendorInvoicesDec;
 
 -- # SUB-SECTION 1.2: AGGREGATED VENDOR ACTIVITIES
 
--- Summarize total activities for each vendor by joining purchase and invoice data.
--- This query provides a holistic view of each vendor's engagement, including POs, quantities,
--- purchase dollars, invoices, invoice dollars, and freight.
+-- Summarize total activities for each vendor by joining purchase, invoice, and sales data.
+-- Provide a holistic view of each vendor's engagement across purchases, invoices, and sales.
 SELECT
     p.VendorNumber,
     p.VendorName,
@@ -38,11 +37,20 @@ SELECT
     SUM(p.Dollars) AS TotalPurchaseDollars,
     COUNT(DISTINCT i.PONumber) AS TotalInvoices,
     SUM(i.Dollars) AS TotalInvoiceDollars,
-    SUM(i.Freight) AS TotalFreight
+    SUM(i.Freight) AS TotalFreight,
+    SUM(s.TotalSalesDollars) AS TotalSalesDollars
 FROM PurchasesDec p
 LEFT JOIN VendorInvoicesDec i
     ON p.VendorNumber = i.VendorNumber AND p.PONumber = i.PONumber
-GROUP BY 
+LEFT JOIN (
+    SELECT
+        VendorNo AS VendorNumber,
+        SUM(SalesDollars) AS TotalSalesDollars
+    FROM SalesDec
+    GROUP BY VendorNo
+) AS s
+    ON p.VendorNumber = s.VendorNumber
+GROUP BY
     p.VendorNumber,
     p.VendorName
 ORDER BY p.VendorNumber;
