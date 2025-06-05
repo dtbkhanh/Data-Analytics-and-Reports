@@ -29,6 +29,13 @@ FROM VendorInvoicesDec;
 
 -- Summarize total activities for each vendor by joining purchase, invoice, and sales data.
 -- Provide a holistic view of each vendor's engagement across purchases, invoices, and sales.
+WITH SalesAgg AS (
+    SELECT
+        VendorNo AS VendorNumber,
+        SUM(SalesDollars) AS TotalSalesDollars
+    FROM SalesDec
+    GROUP BY VendorNo
+)
 SELECT
     p.VendorNumber,
     p.VendorName,
@@ -39,21 +46,16 @@ SELECT
     SUM(i.Dollars) AS TotalInvoiceDollars,
     SUM(i.Freight) AS TotalFreight,
     ROUND(SUM(i.Freight) * 100.0 / NULLIF(SUM(i.Dollars), 0), 2) AS FreightPercentOfPurchase,
-    SUM(s.TotalSalesDollars) AS TotalSalesDollars
+    sa.TotalSalesDollars
 FROM PurchasesDec p
 LEFT JOIN VendorInvoicesDec i
     ON p.VendorNumber = i.VendorNumber AND p.PONumber = i.PONumber
-LEFT JOIN (
-    SELECT
-        VendorNo AS VendorNumber,
-        SUM(SalesDollars) AS TotalSalesDollars
-    FROM SalesDec
-    GROUP BY VendorNo
-) AS s
-    ON p.VendorNumber = s.VendorNumber
+LEFT JOIN SalesAgg sa
+    ON p.VendorNumber = sa.VendorNumber
 GROUP BY
     p.VendorNumber,
-    p.VendorName
+    p.VendorName,
+    sa.TotalSalesDollars
 ORDER BY p.VendorNumber;
 
 -- # SUB-SECTION 1.3: SALES PERFORMANCE OF VENDOR-SUPPLIED ITEMS
