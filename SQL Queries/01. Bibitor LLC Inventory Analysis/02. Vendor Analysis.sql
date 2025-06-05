@@ -38,6 +38,7 @@ SELECT
     COUNT(DISTINCT i.PONumber) AS TotalInvoices,
     SUM(i.Dollars) AS TotalInvoiceDollars,
     SUM(i.Freight) AS TotalFreight,
+    ROUND(SUM(i.Freight) * 100.0 / NULLIF(SUM(i.Dollars), 0), 2) AS FreightPercentOfPurchase,
     SUM(s.TotalSalesDollars) AS TotalSalesDollars
 FROM PurchasesDec p
 LEFT JOIN VendorInvoicesDec i
