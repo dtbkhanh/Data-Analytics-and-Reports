@@ -59,7 +59,7 @@ SELECT
 FROM Purchases p
 JOIN Sales s 
   ON p.InventoryId = s.InventoryId AND p.Store = s.Store
-WHERE s.FirstSold IS NOT NUL
+WHERE s.FirstSold IS NOT NULL
 ORDER BY DaysToSell DESC;
 
 ---------------------------------------------------------------------------------------------------
