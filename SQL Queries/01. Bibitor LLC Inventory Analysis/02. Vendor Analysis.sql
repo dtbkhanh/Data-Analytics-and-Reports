@@ -13,7 +13,7 @@
 ---------------------------------------------------------------------------------------------------
 
 -- This section focuses on identifying all unique vendors and providing a comprehensive summary
--- of their combined activities across purchasing and invoicing.
+-- of their combined activities across purchases, invoices, and sales.
 
 -- # SUB-SECTION 1.1: LIST ALL DISTINCT VENDORS
 
@@ -45,7 +45,7 @@ SELECT
     COUNT(DISTINCT i.PONumber) AS TotalInvoices,
     SUM(i.Dollars) AS TotalInvoiceDollars,
     SUM(i.Freight) AS TotalFreight,
-    ROUND(SUM(i.Freight) * 100.0 / NULLIF(SUM(i.Dollars), 0), 2) AS FreightPercentOfPurchase,
+    -- ROUND(SUM(i.Freight) * 100.0 / NULLIF(SUM(i.Dollars), 0), 2) AS FreightPercentOfPurchase,
     sa.TotalSalesDollars
 FROM PurchasesDec p
 LEFT JOIN VendorInvoicesDec i
@@ -67,7 +67,9 @@ ORDER BY p.VendorNumber;
 CREATE TABLE VendorItemsSold AS
 SELECT
     p.VendorNumber,
+	p.VendorName,
     s.InventoryId,
+	s.Description,
     SUM(s.SalesQuantity) AS total_sold,
     SUM(s.SalesQuantity * s.SalesPrice) AS total_sales
 FROM SalesDec s
@@ -77,16 +79,20 @@ GROUP BY
     p.VendorNumber,
     s.InventoryId;
 
--- ## 1.3.2: Identify the top-selling Product by Vendor
+-- ## 1.3.2: Identify the Top-Selling Product by Vendor
 SELECT
     VendorNumber,
+    VendorName,
     InventoryId,
+    Description,
     total_sold,
     total_sales
 FROM (
     SELECT
         VendorNumber,
+        VendorName,
         InventoryId,
+        Description,
         total_sold,
         total_sales,
         ROW_NUMBER() OVER (PARTITION BY VendorNumber ORDER BY total_sold DESC) as rn
