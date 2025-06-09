@@ -56,6 +56,6 @@ This script helps analyze inventory valuation by calculating the Moving Average 
 
 ---
 ## 📝 Case Study Blog
-👉 [Read Here](https://dtbkhanh.github.io/2025/04/21/mobile-app-marketing-conversion-analysis.html)  
+👉 [Read Here](https://dtbkhanh.github.io/2025/05/28/bibitor-inventory-sales-analysis.html)  
 
 This case offers practical insights into retail operations, inventory control, and vendor performance — a comprehensive exercise in data-driven business decision-making.
