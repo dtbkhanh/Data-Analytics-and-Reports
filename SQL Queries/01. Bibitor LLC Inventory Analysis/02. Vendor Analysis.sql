@@ -102,6 +102,18 @@ FROM (
 WHERE rn = 1; -- Filters to include only the top-ranked (most sold) item for each vendor
 
 
+-- ## 1.3.3: Calculate total Ending Inventory per Vendor
+SELECT
+    p.VendorNumber,
+    p.VendorName,
+    COALESCE(SUM(e.onHand), 0) AS total_ending_inventory_units_by_vendor,
+    COALESCE(SUM(e.onHand * e.Price), 0) AS total_ending_inventory_value_by_vendor
+FROM PurchasesDec p
+LEFT JOIN EndInvDec e
+    ON p.InventoryId = e.InventoryId
+GROUP BY p.VendorNumber, p.VendorName
+ORDER BY p.VendorName;
+
 ---------------------------------------------------------------------------------------------------
 -- SECTION 2: TOP VENDORS BY KEY METRICS
 ---------------------------------------------------------------------------------------------------
