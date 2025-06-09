@@ -101,7 +101,6 @@ FROM (
 ) AS RankedSales
 WHERE rn = 1; -- Filters to include only the top-ranked (most sold) item for each vendor
 
-
 -- ## 1.3.3: Calculate total Ending Inventory per Vendor
 SELECT
     p.VendorNumber,
