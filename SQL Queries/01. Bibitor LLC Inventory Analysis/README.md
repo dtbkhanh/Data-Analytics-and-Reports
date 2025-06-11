@@ -7,7 +7,7 @@ This case study analyzes sales, purchases, inventory, and vendor invoice data fo
 
 ---
 
-## 📊 Datasets Overview
+## 🧾 Datasets Overview
 
 - **Inventory**
   - `BegInvDec`: Inventory at the start of December 2016.
@@ -55,6 +55,9 @@ This script analyzes **inventory turnover and identifies slow-moving inventory**
 This script helps analyze inventory valuation by calculating the Moving Average Cost (MAC) of items, combining sales and purchase data with inventory balances. It supports better cost control and inventory management decisions.
 
 ---
+## 📊 🧾Dashboards
+👉 [View Live Dashboards](https://lookerstudio.google.com/reporting/85a4eec4-8ecb-48e9-babd-d3117a5b6580)  
+
 ## 📝 Case Study Blog
 👉 [Read Here](https://dtbkhanh.github.io/2025/05/28/bibitor-inventory-sales-analysis.html)  
 
