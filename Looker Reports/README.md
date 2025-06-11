@@ -60,3 +60,14 @@ The dashboard provides key insights into:
 - Strategic budget recommendations based on revenues and user intent signals
 
 This analysis helps inform more innovative marketing investments and supports product growth by identifying the most impactful campaigns, audiences, and conversion levers.
+
+---
+
+## 📊 07.  Bibitor, LLC – Liquor Sales & Inventory Analysis
+
+**🔗 Dataset:** HUB of Analytics Education – [www.hubae.org](https://www.hubae.org)  
+**📈 Live Dashboard:** [View Here](https://lookerstudio.google.com/reporting/85a4eec4-8ecb-48e9-babd-d3117a5b6580)  
+**💻 Data Preparation:** [View Here](https://github.com/dtbkhanh/Data-Analytics-and-Reports/tree/0d74ffe3b18dfa5394d9986c687da2ca918c6acc/SQL%20Queries/01.%20Bibitor%20LLC%20Inventory%20Analysis)  
+**📝 Case Study Blog:** [Read Here](https://dtbkhanh.github.io/2025/05/28/bibitor-inventory-sales-analysis.html)  
+
+This dashboard reveals key insights into vendor efficiency, inventory turnover, and product cost accuracy. By visualizing sales velocity, supplier performance, and cost variances, it builds a data-driven foundation for smarter purchasing, better inventory management, and more strategic decision-making.
