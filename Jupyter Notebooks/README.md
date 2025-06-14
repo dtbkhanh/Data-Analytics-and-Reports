@@ -37,9 +37,3 @@ This notebook analyzes COVID-19 patient data, focusing on demographic, health co
 **📝 Case Study Blog:** [Read Here](https://dtbkhanh.github.io/2025/04/21/mobile-app-marketing-conversion-analysis.html)  
 
 This notebook analyzes user behavior, marketing channel performance, and conversion trends for a mobile application targeting self-employed professionals. The dataset covers user acquisition, campaign types, regional engagement, and subscription patterns.
-
----
-
-## 📊 #06. Business Legal Form Categorization
-
-In the current dataset, the field "Business Type" is missing. A separate reference table with relevant "Business Type" information has been created. This notebook focuses on cleaning, standardizing, and categorizing business legal forms into defined business types (e.g., Private, Public, Hybrid). It includes logic for exact and case-insensitive matching, as well as handling missing or unclassified entries, enriching datasets with a 'BUSINESS_TYPE' and 'MATCH_QUALITY' column for subsequent analytical use.
