@@ -55,7 +55,7 @@ To clean and classify a column of messy "Legal Form" values from a business regi
 
 ### 🛠️ Key Steps  
 - ✅ **Standardization**: Normalized cases, whitespace, and known suffix/prefix patterns.
-- 🔍 **Partial Matching**: Used a supplemental dictionary for typos and known variants (e.g., `gGmbH` → `GmbH`).
+- 🔍 **Partial Matching**: Used a supplemental dictionary for typos and known variants.
 - ❌ **Unmatched Entries**: Flagged for further review or enrichment (e.g., foreign or hybrid forms).
 - 📊 **Summary Tables**: Outputs grouped by match status for quick review.
 
