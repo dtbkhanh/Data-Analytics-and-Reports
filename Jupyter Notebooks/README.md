@@ -37,3 +37,28 @@ This notebook analyzes COVID-19 patient data, focusing on demographic, health co
 **📝 Case Study Blog:** [Read Here](https://dtbkhanh.github.io/2025/04/21/mobile-app-marketing-conversion-analysis.html)  
 
 This notebook analyzes user behavior, marketing channel performance, and conversion trends for a mobile application targeting self-employed professionals. The dataset covers user acquisition, campaign types, regional engagement, and subscription patterns.
+
+---
+
+## 📊  #06. Business Type Classifier
+
+This case study demonstrates an approach to **classifying and standardizing legal business form entries** using a combination of:
+- Exact and fuzzy matching techniques
+- Dictionary-based standardization
+- Data validation and manual review support
+
+### 🔗 Dataset:  
+Sample data extracted from public business registries 
+
+### 💡 Goal  
+To clean and classify a column of messy "Legal Form" values from a business registry dataset, mapping them to standardized business types like `GmbH`, `UG`, or `AG`.
+
+### 🛠️ Key Steps  
+- ✅ **Standardization**: Normalized cases, whitespace, and known suffix/prefix patterns.
+- 🔍 **Partial Matching**: Used a supplemental dictionary for typos and known variants (e.g., `gGmbH` → `GmbH`).
+- ❌ **Unmatched Entries**: Flagged for further review or enrichment (e.g., foreign or hybrid forms).
+- 📊 **Summary Tables**: Outputs grouped by match status for quick review.
+
+### 🧩 Notes  
+- This version omits proprietary or company-specific content.
+- The matching dictionary is designed to be extensible as new forms appear.
